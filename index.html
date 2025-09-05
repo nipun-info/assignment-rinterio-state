@@ -4,17 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biker Zone</title>
+    <title>Rinterio Real State</title>
 
     <!-- font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Google font (poppins) -->
+    <!-- Google font cdn(Manrope) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
 
     <!-- Tailwind and daisy UI cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
@@ -27,9 +28,16 @@
                 extend: {
                     colors: {
                         clifford: '#da373d',
+                        'color-1': '#ABEF5F',
+                        'custom-start': 'rgba(244, 244, 244, 0.1)',
+                        'custom-end': 'rgba(244, 244, 244, 1)',
+                        'gray-1': 'rgba(244, 244, 244, 1)',
+                        'gray-2': 'rgba(73, 73, 73, 1)',
+                        'gray-3': 'rgba(115, 115, 115, 1)',
+
                     },
                     fontFamily: {
-                        poppins: ["Poppins", "sans-serif"],
+                        manrope: ["Manrope", "sans-serif"],
                     }
                 }
             }
@@ -43,12 +51,168 @@
 
 <body>
     <!-- ***** Header Section ***** -->
-    <header class="font-poppins">
+    <header class="font-manrope bg-gradient-to-r from-custom-start to-custom-end py-8 px-8">
+        <div class="container mx-auto">
+            <!-- navbar -->
+            <nav class="navbar">
+                <div class="navbar-start">
+                    <a class="flex items-center justify-center gap-2">
+                        <div class="bg-[#ABEF5F] h-8 w-8 rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-arrow-right -rotate-45 "></i>
+                        </div>
+                        <span class="text-2xl font-bold">Rinterio</span>
+                    </a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a class="font-bold">Home</a></li>
+                        <li><a>Service</a></li>
+                        <li><a>Portfolio</a></li>
+                        <li><a>Blogs</a></li>
+                        <li><a>Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end space-x-4">
+                    <div class="bg-white h-12 w-12 rounded-full flex items-center justify-center">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="bg-white h-12 w-12 rounded-full flex items-center justify-center">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <button class="btn bg-color-1 h-12 w-44 rounded-full hidden md:flex">
+                        <span class="text-[#494949] font-bold">Book Consult</span>
+                        <div class="bg-[#494949] h-8 w-8 rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-arrow-right text-white -rotate-45"></i>
+                        </div>
+                    </button>
 
+                    <div class="dropdown">
+                        <div tabindex="0" role="button"
+                            class="bg-white h-12 w-12 rounded-full flex items-center justify-center md:hidden">
+                            <i class="fa-solid fa-bars h-5 w-5"></i>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 -ml-12 w-52 p-2 shadow">
+                            <li><a>Home</a></li>
+                            <li><a>Service</a></li>
+                            <li><a>Portfolio</a></li>
+                            <li><a>Blogs</a></li>
+                            <li><a>Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- hero section -->
+            <div class="max-w-screen-lg mx-auto flex flex-col items-center justify-center gap-5 text-center ">
+                <img src="images/banner.png" alt="">
+                <h1 class="lg:text-6xl lg:leading-[68px] md:text-3xl text-xl font-bold text-[#212121] ">
+                    A barn house of this design has a <br> striking appearance
+                </h1>
+                <p class="text-[#494949]">
+                    The barn house captivates with its blend of rustic charm and modern sophistication, featuring
+                    weathered
+                    wood, sleek metal accents, and large windows that flood the space with natural light.
+                </p>
+
+                <a class="btn bg-[#cdf1a3] border-2 border-[#ABEF5F] h-12 md:w-44 w-full rounded-full">
+                    <span class="text-[#494949] font-bold">Book Consult</span>
+                    <div class="bg-[#494949] h-8 w-8 rounded-full flex items-center justify-center">
+                        <i class="fa-solid fa-arrow-right text-white -rotate-45"></i>
+                    </div>
+                </a>
+
+            </div>
+        </div>
     </header>
 
     <!-- ***** Main Section ***** -->
-    <main></main>
+    <main class="bg-gray-100">
+        <!-- ===== about us section ===== -->
+        <section class="py-8 lg:py-24">
+            <div class="container mx-auto px-8 lg:flex justify-center items-start gap-8 text-center lg:text-left relative">
+                <div class="absolute -left-4 -top-16 hidden lg:flex">
+                    <img src="images/vector.png" alt="">
+                </div>
+                <!-- about content -->
+                <div class="lg:w-1/2 space-y-8">
+                    <span class="bg-white text-gray-2 font-bold px-4 py-2 rounded-full">
+                        <i class="fa-solid fa-arrow-right"></i>
+                        About Us
+                    </span>
+                    <h2 class="text-xl md:text-2xl lg:text-5xl font-bold">
+                        We design thoughtful, liveable spaces
+                    </h2>
+                    <p class="text-gray-2 lg:w-5/6">
+                        The barn house captivates with its blend of rustic charm and
+                        modern sophistication, featuring weathered wood, sleek metal accents.
+                    </p>
+                    <!-- card container -->
+                    <div class="flex flex-col md:flex-row lg:flex-col gap-5 text-left ">
+                        <div class="bg-white p-5 rounded-lg flex gap-4">
+                            <img src="images/commercial.png" alt="">
+                            <div>
+                                <h4 class="text-lg font-bold mb-2">Commercial</h4>
+                                <p class="text-gray-2 lg:w-5/6">
+                                    The barn house captivates with its blend of rustic charm and modern.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-lg flex gap-4">
+                            <img src="images/residential.png" alt="">
+                            <div>
+                                <h4 class="text-lg font-bold mb-2">Residential</h4>
+                                <p class="text-gray-2 lg:w-5/6">
+                                    The barn house captivates with its blend of rustic charm and modern.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- about  images -->
+                <div class="lg:ml-16 mt-5 lg:mt-0">
+                    <img class="w-full" src="images/about.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== status section ===== -->
+         <section class="py-8 lg:py-24">
+            <div class="container mx-auto bg-white rounded-lg">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:grid-cols-4 py-8 lg:py-24">
+                    <div class="text-center space-y-3">
+                        <img class="inline h-10 w-10" src="images/icons/comment-01.png" alt="">
+                        <h3 class="text-4xl text-gray-3 font-bold "> 235+ </h3>
+                        <p class="text-gray-3">Happy Client Review</p>
+                    </div>
+
+                    <div class="text-center space-y-3">
+                        <img class="inline h-10 w-10" src="images/icons/departement.png" alt="">
+                        <h3 class="text-4xl text-gray-3 font-bold "> 50+ </h3>
+                        <p class="text-gray-3">Work Departments</p>
+                    </div>
+
+                    <div class="text-center space-y-3">
+                        <img class="inline h-10 w-10" src="images/icons/user-multiple.png" alt="">
+                        <h3 class="text-4xl text-gray-3 font-bold "> 30k+ </h3>
+                        <p class="text-gray-3">Our Happy Client</p>
+                    </div>
+
+                    <div class="text-center space-y-3">
+                        <img class="inline h-10 w-10" src="images/icons/user-group.png" alt="">
+                        <h3 class="text-4xl text-gray-3 font-bold "> 307+ </h3>
+                        <p class="text-gray-3">Staff Members</p>
+                    </div>
+                </div>
+            </div>
+         </section>
+        <!-- ===== our works section ===== -->
+        <!-- ===== our Portfolio section ===== -->
+        <!-- ===== our articles and news section ===== -->
+        <!-- ===== communication section ===== -->
+    </main>
 
     <!-- ***** Footer Section ***** -->
     <footer></footer>
